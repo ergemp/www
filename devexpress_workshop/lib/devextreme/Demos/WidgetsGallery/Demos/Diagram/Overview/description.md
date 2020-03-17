@@ -1,0 +1,3 @@
+*Note that the **Diagram** widget is in the community technology preview (CTP) development stage.*
+
+The DevExtreme HTML5 JavaScript **Diagram** provides a visual interface to be used when you design new diagrams or modify existing ones. This control is available as a jQuery plugin and can be bound to external data. The **Diagram** provides more than 40 resizable shapes, which you can drag-and-drop onto a page. Shapes and connectors are highly customizable. 

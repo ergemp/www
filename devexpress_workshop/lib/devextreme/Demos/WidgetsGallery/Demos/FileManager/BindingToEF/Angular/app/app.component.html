@@ -1,0 +1,15 @@
+<dx-file-manager id="fileManager"
+    [fileProvider]="remoteProvider"
+    currentPath="Documents/Reports"
+    [allowedFileExtensions]="allowedFileExtensions"
+    [customizeDetailColumns]="customizeDetailColumns"
+    height="550">
+
+    <dxo-permissions 
+        create="true"
+        copy="true"
+        move="true"
+        remove="true"
+        rename="true">
+    </dxo-permissions>
+</dx-file-manager>

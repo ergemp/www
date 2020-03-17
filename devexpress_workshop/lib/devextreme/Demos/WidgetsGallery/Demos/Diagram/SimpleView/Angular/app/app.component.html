@@ -1,0 +1,5 @@
+<dx-diagram #diagram id="diagram" [simpleView]="true">
+    <dxo-nodes [dataSource]="dataSource" keyExpr="ID" textExpr="Title" parentKeyExpr="Head_ID"></dxo-nodes>
+    <dxo-toolbox [visible]="false"></dxo-toolbox>
+    <dxo-properties-panel [enabled]="false"></dxo-properties-panel>
+</dx-diagram>

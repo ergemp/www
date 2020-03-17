@@ -1,0 +1,14 @@
+<dx-diagram #diagram id="diagram">
+    <dxo-context-menu [enabled]="true" [commands]='["bringToFront", "sendToBack", "lock", "unlock"]'>
+    </dxo-context-menu>
+    <dxo-properties-panel [enabled]="true" [collapsible]="false">
+        <dxi-group [commands]='["units"]'></dxi-group>
+        <dxi-group [commands]='["pageSize","pageOrientation","pageColor"]'></dxi-group>
+    </dxo-properties-panel>
+    <dxo-toolbar [visible]="true" [commands]='["undo","redo","separator","fontName","fontSize","separator","bold","italic","underline","separator","fontColor","lineColor","fillColor","separator"]'>
+    </dxo-toolbar>
+    <dxo-toolbox [visible]="true">
+        <dxi-group category="general" title="General"></dxi-group>
+        <dxi-group category="flowchart" title="Flowchart" [expanded]="true"></dxi-group>
+    </dxo-toolbox>
+</dx-diagram>

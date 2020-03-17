@@ -1,0 +1,46 @@
+<template>
+  <dx-diagram
+    id="diagram"
+    ref="diagram"
+  >
+    <dx-toolbox :visible="true">
+      <dx-group
+        :category="'general'"
+        :title="'General'"
+      />
+      <dx-group
+        :category="'containers'"
+        :title="'Containers'"
+        :expanded="true"
+      />
+    </dx-toolbox>
+  </dx-diagram>
+</template>
+<script>
+import { DxDiagram, DxToolbox, DxGroup } from 'devextreme-vue/diagram';
+import 'whatwg-fetch';
+
+export default {
+  components: {
+    DxDiagram, DxToolbox, DxGroup
+  },
+  mounted() {
+    var diagram = this.$refs['diagram'].instance;
+    fetch('../../../../data/diagram-structure.json')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(json) {
+        diagram.import(JSON.stringify(json));
+      })
+      .catch(function() {
+        throw 'Data Loading Error';
+      });
+  }
+};
+</script>
+<style scoped>
+    #diagram {
+        height: 725px;
+    }
+</style>
